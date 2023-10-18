@@ -13,10 +13,14 @@
 #include "Temperature.h"
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 
 using namespace std;
 
 int main() {
+	//Set number precision
+	cout << std::fixed << std::setprecision(1);
+
 	//Initialize the variables
 	int x = 0;
 	float temperature;
@@ -43,6 +47,9 @@ int main() {
 	while (tempIn && x <= 1000) {
 		if (temperature >= -30 && temperature <= 150) {
 			Temp.displayTemp(temperature);
+		}
+		else {
+			cout << "ERROR: " << temperature << " is out of range" << endl;
 		}
 		tempIn >> temperature;
 		x++;

@@ -7,7 +7,9 @@ Temp::Temp()
 }
 
 //Destroy object
-Temp::~Temp() {}
+Temp::~Temp()
+{
+}
 
 //Creates the bar chart, stars starting 3 up from minimum
 void Temp::displayTemp(float temp) {
